@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cars table</title>
+</head>
+<body>
+<h1>Cars</h1>
+
+<table border="1">
+
+    <tr>
+        <th>Model</th>
+        <th>Color</th>
+        <th>Max speed</th>
+    </tr>
+
+
+    <tr th:each="cars, iter : ${cars}">
+        <td th:utext="${cars.getModel()}"></td>
+        <td th:utext="${cars.getColor()}"></td>
+        <td th:utext="${cars.getMaxSpeed()}"></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
